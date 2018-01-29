@@ -1,16 +1,20 @@
 #
-# Makefile for Docker
-# 
+# Standard version level Makefile used to build a Docker container for WPLib - https://github.com/wplib/wplib-box/
+#
 
-PROJECT		?= wplib
-NAME		?= redis
-VERSION		?= 4.0.7
-MAJORVERSION	?= 4.0
-PORTS		?= -p 6379:6379
-VOLUMES		?= 
-ENV		?= 
+define GetFromPkg
+$(shell node -p "require('./template.json').$(1)")
+endef
 
-LATEST		?= 1
+PROJECT		:= $(call GetFromPkg,project)
+NAME		:= $(call GetFromPkg,name)
+VERSION		:= $(call GetFromPkg,version)
+MAJORVERSION	:= $(call GetFromPkg,majorversion)
+LATEST		:= $(call GetFromPkg,latest)
+PORTS		:= $(call GetFromPkg,ports)
+VOLUMES		:= $(call GetFromPkg,volumes)
+ARGS		:= $(call GetFromPkg,args)
+ENV		:= $(call GetFromPkg,env)
 
 IMAGE_NAME	?= $(PROJECT)/$(NAME)
 CONTAINER_NAME	?= $(PROJECT)_$(NAME)_$(VERSION)
@@ -22,12 +26,12 @@ CONTAINER_NAME	?= $(PROJECT)_$(NAME)_$(VERSION)
 # Image related commands.
 
 build: Dockerfile
-	-docker build -t $(IMAGE_NAME):$(VERSION) --build-arg REDIS_VERSION=$(VERSION) .
+	-docker build -t $(IMAGE_NAME):$(VERSION) --build-arg $(ENV)=$(VERSION) .
 ifneq ($(MAJORVERSION),)
-	-docker build -t $(IMAGE_NAME):$(MAJORVERSION) --build-arg REDIS_VERSION=$(MAJORVERSION) .
+	-docker build -t $(IMAGE_NAME):$(MAJORVERSION) --build-arg $(ENV)=$(MAJORVERSION) .
 endif
 ifeq ($(LATEST),1)
-	docker build -t $(IMAGE_NAME):latest --build-arg REDIS_VERSION=latest .
+	docker build -t $(IMAGE_NAME):latest --build-arg $(ENV)=latest .
 endif
 
 push:

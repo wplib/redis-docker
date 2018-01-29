@@ -1,0 +1,12 @@
+{
+	"project": "wplib",
+	"name": "redis",
+	"version": "3.2.11",
+	"majorversion": "3.2",
+	"latest": "",
+	"ports": "-p 6379:6379",
+	"volumes": "",
+	"args": "",
+	"env": "REDIS_VERSION"
+}
+
