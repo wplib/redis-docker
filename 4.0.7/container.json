@@ -4,8 +4,10 @@
 	"version": "4.0.7",
 	"majorversion": "4.0",
 	"latest": "1",
+	"network": "--network wplibbox",
 	"ports": "-p 6379:6379",
 	"volumes": "",
+	"restart": "--restart unless-stopped",
 	"args": "",
 	"env": "REDIS_VERSION"
 }
