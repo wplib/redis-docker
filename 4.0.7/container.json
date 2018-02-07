@@ -7,7 +7,7 @@
 	"network": "--network wplibbox",
 	"ports": "-p 6379:6379",
 	"volumes": "",
-	"restart": "--restart unless-stopped",
+	"restart": "--restart no",
 	"args": "",
 	"env": "REDIS_VERSION"
 }
