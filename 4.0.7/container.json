@@ -4,6 +4,7 @@
 	"version": "4.0.7",
 	"majorversion": "4.0",
 	"latest": "1",
+	"class": "kvstore",
 	"network": "--network wplibbox",
 	"ports": "-p 6379:6379",
 	"volumes": "",
