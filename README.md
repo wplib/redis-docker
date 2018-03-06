@@ -12,12 +12,12 @@
 
 # Redis Docker Container for WPLib Box
 This is the repository for the [Redis](https://redis.io/) Docker container implemented for [WPLib-Box](https://github.com/wplib/wplib-box).
-It currently provides versions 3.2.11 4.0.7
+It currently provides versions 3.2.11 4.0.8
 
 
 ## Supported tags and respective Dockerfiles
 
-`4.0.7`, `4.0`, `latest` _([4.0.7/Dockerfile](https://github.com/wplib/redis-docker/blob/master/4.0.7/Dockerfile))_
+`4.0.8`, `4.0`, `latest` _([4.0.8/Dockerfile](https://github.com/wplib/redis-docker/blob/master/4.0.8/Dockerfile))_
 
 `3.2.11`, `3.2` _([3.2.11/Dockerfile](https://github.com/wplib/redis-docker/blob/master/3.2.11/Dockerfile))_
 
@@ -42,23 +42,23 @@ A simple `docker pull wplib/redis` will pull down the latest version.
 ### Runtime from Docker Hub
 start - Spin up a Docker container with the correct runtime configs.
 
-`docker run -d --name wplib_redis_4.0.7 --restart unless-stopped --network wplibbox -p 6379:6379  wplib/redis:4.0.7`
+`docker run -d --name wplib_redis_4.0.8 --restart unless-stopped --network wplibbox -p 6379:6379  wplib/redis:4.0.8`
 
 stop - Stop a Docker container.
 
-`docker stop wplib_redis_4.0.7`
+`docker stop wplib_redis_4.0.8`
 
 run - Run a Docker container in the foreground, (all STDOUT and STDERR will go to console). The Container be removed on termination.
 
-`docker run --rm --name wplib_redis_4.0.7 --network wplibbox -p 6379:6379  wplib/redis:4.0.7`
+`docker run --rm --name wplib_redis_4.0.8 --network wplibbox -p 6379:6379  wplib/redis:4.0.8`
 
 shell - Run a shell, (/bin/bash), within a Docker container.
 
-`docker run --rm --name wplib_redis_4.0.7 -i -t --network wplibbox -p 6379:6379  wplib/redis:4.0.7 /bin/bash`
+`docker run --rm --name wplib_redis_4.0.8 -i -t --network wplibbox -p 6379:6379  wplib/redis:4.0.8 /bin/bash`
 
 rm - Remove the Docker container.
 
-`docker container rm wplib_redis_4.0.7`
+`docker container rm wplib_redis_4.0.8`
 
 
 ## Using it from GitHub repo
