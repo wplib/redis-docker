@@ -1,7 +1,7 @@
 {
 	"project": "wplib",
 	"name": "redis",
-	"version": "4.0.8",
+	"version": "4.0.9",
 	"majorversion": "4.0",
 	"latest": "1",
 	"class": "kvstore",
