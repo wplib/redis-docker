@@ -1,3 +1,6 @@
+![Redis 4.0.x](https://img.shields.io/badge/Redis-4.0.x-green.svg)
+![Redis 3.2.x](https://img.shields.io/badge/Redis-3.2.x-green.svg)
+
 ```
  __          _______  _      _ _       ____
  \ \        / /  __ \| |    (_) |     |  _ \
