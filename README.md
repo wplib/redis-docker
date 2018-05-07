@@ -15,7 +15,7 @@
 
 # Redis Docker Container for WPLib Box
 This is the repository for the [Redis](https://redis.io/) Docker container implemented for [WPLib-Box](https://github.com/wplib/wplib-box).
-It currently provides versions 3.2.11 4.0.9
+It currently provides versions 3.2.x 4.0.x
 
 
 ## Supported tags and respective Dockerfiles
